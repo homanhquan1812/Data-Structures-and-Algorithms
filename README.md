@@ -1,8 +1,19 @@
 ﻿# General IT Knowledge
 ## Basic knowledge of Object-Oriented Programming (OOP)
 ### What is OOP?
+<div align="center">
+  <img src="https://github.com/homanhquan1812/General-IT-Knowledge/assets/130955957/2e703da8-ea0b-456e-8022-b02581da4079" alt="YOLOHOME Logo" width="600" style="">
+</div>
+
+OOP là viết tắt của Object-Oriented Programming, có nghĩa là `lập trình hướng đối tượng`. Lập trình hướng đối tượng (OOP) là một mô hình lập trình dựa trên khái niệm "đối tượng", được tạo ra dựa trên khuôn mẫu của các lớp. 
+
+<div align="center">
+  <img src="https://github.com/homanhquan1812/General-IT-Knowledge/assets/130955957/f84049e8-26bb-4d9a-a82e-5d7aae499666" width="600" style="">
+</div>
+
+
 ### Class (Lớp)
-Là một khuôn mẫu để tạo ra các đối tượng (Object). Nó định nghĩa các thuộc tính và phương thức mà các đối tượng của lớp đó sẽ có.
+Là một khuôn mẫu để tạo ra các đối tượng (Object). Nó định nghĩa các trường (thường được gọi là thuộc tính) và phương thức mà các đối tượng của lớp đó sẽ có.
 
 Các thành phần thường gặp trong Class:
 * `Field`: Còn được gọi là **trường**, là những thông tin, đặc điểm của đối tượng (Tên, tuổi,...); ta thường dùng `private` để tăng tính bảo mật.
