@@ -2,10 +2,10 @@
 ## Basic knowledge of Object-Oriented Programming (OOP)
 ### What is OOP?
 ### Class (Lớp)
-Là một khuôn mẫu (Template) để tạo ra các đối tượng. Nó định nghĩa các trường `Fields` và phương thức `Methods` mà các đối tượng của lớp đó sẽ có.
+Là một khuôn mẫu để tạo ra các đối tượng (Object). Nó định nghĩa các thuộc tính và phương thức mà các đối tượng của lớp đó sẽ có.
 
 Các thành phần thường gặp trong Class:
-* `Field (Member variable)`: Còn được gọi là **trường**, là những thông tin, đặc điểm của đối tượng. Ta thường dùng `private` để tăng tính bảo mật.
+* `Field`: Còn được gọi là **trường**, là những thông tin, đặc điểm của đối tượng (Tên, tuổi,...); ta thường dùng `private` để tăng tính bảo mật.
   
 Ví dụ, một class Person có 2 trường <b>name</b> và <b>age</b>:
 ```
@@ -44,7 +44,7 @@ public class Person
 ```     
 
 Các định nghĩa khác:
-* `Destructor`: Còn gọi là hàm hủy, là một loại phương thức đặc biệt được thực thi khi một đối tượng của class đó bị hủy. Hàm này được sử dụng để giải phóng bộ nhớ (Đọc thêm khi nào cần sử dụng).
+* `Destructor`: Còn gọi là hàm hủy, là một loại phương thức đặc biệt được thực thi khi một đối tượng của class đó bị hủy. Hàm này được sử dụng để giải phóng bộ nhớ (Trong C# thì không cần hàm này nhờ tính năng **Garbage Collector**).
 * `Property`: Gọi là thuộc tính, khái niệm giống với trường, chỉ khác nhau cách dùng và có tính đóng gói. Chỉ có vài ngôn ngữ lập trình có thuộc tính (C#, Python,...).
   
 Ví dụ về 1 đoạn code dùng field:
@@ -146,7 +146,57 @@ class Person
 }
 ```
 
-### Object
+### Object (Đối tượng)
+Đối tượng là 1 thực thể được tạo ra từ Lớp, chứa dữ liệu và hành vi cụ thể. Đối tượng thường được tạo ở hàm chính.
+
+Từ ví dụ ở đoạn code này:
+```
+class Person
+{
+    // Fields
+    private string name;
+    public int age;           
+    
+    // Constructor
+    public Person(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    public string getName()
+    {
+        return name;
+    }
+    
+    public void setName(string value)
+    {
+        name = value;
+    }
+
+    // Methods
+    public void Information()
+    {
+        Console.WriteLine($"Your information includes name: {name} and age: {age}");
+    }
+}
+```
+
+Ta sẽ khai báo ở hàm chính như sau:
+```
+string myName = "Ho Manh Quan";
+int myAge = 23;
+
+Person Person1 = new Person(myName, myAge); // Ta đã tạo ra Person1 từ class Person
+
+Console.WriteLine($"My name is {Person1.getName()} and I'm {Person1.age} years old.");
+
+Person Person2 = new Person("Sussy Boy", 25);
+
+Console.WriteLine($"My name is {Person2.getName()} and I'm {Person2.age} years old.");
+
+Person2.Information();
+```
 ## Four concepts of Object-Oriented Programming
 ### Inheritance (Kế thừa)
 Cho phép một hoặc nhiều lớp (`Derived class` - Lớp dẫn xuất) <b>kế thừa thuộc tính và phương thức của một lớp khác</b> (`Base class` - Lớp cơ sở) để tăng khả năng tái sử dụng và giảm thiểu việc lặp lại code. 
