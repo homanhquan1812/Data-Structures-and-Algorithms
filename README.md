@@ -6,6 +6,7 @@ Là một khuôn mẫu (Template) để tạo ra các đối tượng. Nó đị
 
 Các thành phần thường gặp trong Class:
 * `Field (Member variable)`: Còn được gọi là **trường**, là những thông tin, đặc điểm của đối tượng. Ta thường dùng `private` để tăng tính bảo mật.
+  
 Ví dụ, một class Person có 2 trường <b>name</b> và <b>age</b>:
 ```
 public class Person
@@ -16,6 +17,7 @@ public class Person
 }
 ```
 * `Constructor`: Hay còn được gọi là **hàm khởi tạo**, là một loại phương thức đặc biệt dùng để khởi tạo đối tượng của một lớp. Tên của Constructor phải trùng với tên lớp và không có kiểu trả về. Các Constructor có thể sử dụng các `Access modifiers` (Đọc ở dưới) để kiểm soát quyền truy cập.
+  
 Ví dụ về 1 constructor trong class Person:
 ```
 public class Person
@@ -29,6 +31,7 @@ public class Person
 }
 ```
 * `Method`: Gọi là **phương thức** (hoặc là hàm trong Class), được dùng để mô tả hành vi hoặc hành động mà các đối tượng của lớp đó có thể thực hiện.
+  
 Ví dụ, một class Person có 1 phương thức <b>Information</b>:
 ```
 public class Person
@@ -43,6 +46,7 @@ public class Person
 Các định nghĩa khác:
 * `Destructor`: Còn gọi là hàm hủy, là một loại phương thức đặc biệt được thực thi khi một đối tượng của class đó bị hủy. Hàm này được sử dụng để giải phóng bộ nhớ (Đọc thêm khi nào cần sử dụng).
 * `Property`: Gọi là thuộc tính, khái niệm giống với trường, chỉ khác nhau cách dùng và có tính đóng gói. Chỉ có vài ngôn ngữ lập trình có thuộc tính (C#, Python,...).
+  
 Ví dụ về 1 đoạn code dùng field:
 ```
 class Person
@@ -77,7 +81,7 @@ class Person
 ```
 Ta thấy rằng phải dùng **getName** và **setName** nếu biến **name** là **private**. C# có tính năng thay thế mà tốt hơn:
 * `Full property`: Tính năng này giúp kiểm soát dữ liệu tốt nhất với những điều kiện ta đặt.
-Ví dụ về **Full property**:
+
 ```
 class Person
 {
@@ -117,6 +121,7 @@ class Person
 ```
 
 * `Auto-implemented property`: Nếu ta không cần kiểm soát chặt chẽ, ta chỉ cần dùng `{ get; set; }`.
+  
 ```
 class Person
 {
