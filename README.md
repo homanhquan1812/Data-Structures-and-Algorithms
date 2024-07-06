@@ -7,6 +7,8 @@
 
 OOP là viết tắt của Object-Oriented Programming, có nghĩa là `lập trình hướng đối tượng`. Lập trình hướng đối tượng (OOP) là một mô hình lập trình dựa trên khái niệm "đối tượng", được tạo ra dựa trên khuôn mẫu của các lớp. 
 
+OOP gồm 2 thành phần chính: `Class` và `Object`.
+
 <div align="center">
   <img src="https://github.com/homanhquan1812/General-IT-Knowledge/assets/130955957/f84049e8-26bb-4d9a-a82e-5d7aae499666" width="600" style="">
 </div>
@@ -210,6 +212,11 @@ Person2.Information();
 ```
 ## Four concepts of Object-Oriented Programming
 ### Inheritance (Kế thừa)
+
+<div align="center">
+  <img src="https://github.com/homanhquan1812/General-IT-Knowledge/assets/130955957/fa33b350-b284-445f-81b3-050695176ab0" alt="YOLOHOME Logo" width="600" style="">
+</div>
+
 Cho phép một hoặc nhiều lớp (`Derived class` - Lớp dẫn xuất) <b>kế thừa thuộc tính và phương thức của một lớp khác</b> (`Base class` - Lớp cơ sở) để tăng khả năng tái sử dụng và giảm thiểu việc lặp lại code. 
 
 Ví dụ trong C#, ta có 1 lớp cha Phone là base class:
@@ -267,6 +274,11 @@ Có 5 loại kế thừa (Đọc thêm):
 * <b>Kế thừa lai</b> (Hybrid inheritance).
 
 ### Encapsulation (Đóng gói)
+
+<div align="center">
+  <img src="https://github.com/homanhquan1812/General-IT-Knowledge/assets/130955957/235a0eec-50e8-4647-9f7d-56720ba5f871" alt="YOLOHOME Logo" width="600" style="">
+</div>
+
 <b>Che giấu thông tin chi tiết của các đối tượng, chỉ cho phép truy cập thông qua phương thức public</b>. Tính chất này giúp tăng tính bảo mật cho đối tượng và tránh tình trạng dữ liệu bị hư hỏng ngoài ý muốn, giúp duy trì tính ổn định và độ tin cậy của chương trình. 
 
 Tính đóng gói được khai triển bằng cách sử dụng Access modifier, gồm:
@@ -315,6 +327,11 @@ Console.WriteLine("Your name is: " + Person1.GetName()); // Ho Manh Quan
 ```
 
 ### Polymorphism (Đa hình)
+
+<div align="center">
+  <img src="https://github.com/homanhquan1812/General-IT-Knowledge/assets/130955957/f7692ae8-06bd-422f-83eb-09ca75c726d4" alt="YOLOHOME Logo" width="600" style="">
+</div>
+
 Cho phép <b>các đối tượng khác nhau thực thi chức năng giống nhau theo những cách khác nhau</b>. Có 2 dạng đa hình:     
 
 * <b>Đa hình tĩnh</b> (Static polymorphism): Xảy ra trong thời gian biên dịch (compile-time). Hai cơ chế phổ biến nhất để đạt được đa hình tĩnh là `Method overloading` và `Operator overloading`.    
@@ -412,6 +429,11 @@ Shape4.Draw(); // Drawing a rectangle.
 ```
 
 ### Abstraction (Trừu tượng)
+
+<div align="center">
+  <img src="https://github.com/homanhquan1812/General-IT-Knowledge/assets/130955957/20670605-e175-4fd1-800a-0b42afcb658a" alt="YOLOHOME Logo" width="600" style="">
+</div>
+
 <b>Ẩn đi các chi tiết triển khai của một lớp và chỉ hiển thị những tính năng cần thiết cho người sử dụng</b>. Tính chất này được thể hiện qua việc sử dụng `Interface` hoặc `Abstract class`. 
 
 - <b>Lớp trừu tượng</b> (Abstract class): Là một lớp không thể được khởi tạo trực tiếp và chứa ít nhất một phương thức trừu tượng, được định nghĩa bằng từ khóa `abstract`. Các lớp con của lớp trừu tượng phải triển khai tất cả các phương thức trừu tượng này để có thể được sử dụng.
