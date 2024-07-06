@@ -518,5 +518,3 @@ myDog_I.Sleep(); // Sleeping
 Animal_I myCat_I = new Cat_I();
 myCat_I.MakeSound(); // Meow
 ```
-## SOLID
-## Design Pattern
