@@ -1,7 +1,36 @@
-﻿# General-IT-Knowledge
-## Object-Oriented Programming
+﻿# General IT Knowledge
+## Basic knowledge of Object-Oriented Programming (OOP)
+### Class (Lớp)
+Là một khuôn mẫu (Template) để tạo ra các đối tượng. Nó định nghĩa các thuộc tính `Properties` và phương thức `Methods` mà các đối tượng của lớp đó sẽ có.
+
+Các thành phần thường gặp trong Class:
+* `Property`: Gọi là thuộc tính, là những thông tin, đặc điểm của đối tượng.
+* `Field (Member variables)`: Còn được gọi là trường, khái niệm giống với thuộc tính, chỉ khác nhau cách dùng. 
+* `Method`: Gọi là phương thức (hoặc là hàm trong Class), được dùng để mô tả hành vi hoặc hành động mà các đối tượng của lớp đó có thể thực hiện.
+Ví dụ, một class Person có 2 phương thức <b>name</b> và <b>age</b>:
+```
+public class Person
+{
+    // Phương thức ghi tên
+    public void name()
+    {
+        Console.Write("My name is Quan");
+    }
+
+    // Phương thức ghi tuổi
+    public double age(double myAge)
+    {
+        return myAge;
+    }
+}
+```
+* `Constructor`: Hay còn được gọi là hàm khởi tạo, là một loại phương thức đặc biệt dùng để khởi tạo đối tượng của một lớp. Tên của Constructor trùng với tên lớp và không có kiểu trả về. Các Constructor có thể sử dụng các access modifiers để kiểm soát quyền truy cập. 
+* `Destructor`: Còn gọi là hàm hủy, là một loại phương thức đặc biệt được thực thi khi một đối tượng của class đó bị hủy. Hàm này được sử dụng để giải phóng bộ nhớ (Đọc thêm khi nào cần sử dụng).         
+  
+### Object
+## Four concepts of Object-Oriented Programming
 ### Inheritance (Kế thừa)
-*Khái niệm*: Cho phép một hoặc nhiều lớp (`Derived class` - Lớp dẫn xuất) <b>kế thừa thuộc tính và phương thức của một lớp khác</b> (`Base class` - Lớp cơ sở) để tăng khả năng tái sử dụng và giảm thiểu việc lặp lại code. 
+Cho phép một hoặc nhiều lớp (`Derived class` - Lớp dẫn xuất) <b>kế thừa thuộc tính và phương thức của một lớp khác</b> (`Base class` - Lớp cơ sở) để tăng khả năng tái sử dụng và giảm thiểu việc lặp lại code. 
 
 Ví dụ trong C#, ta có 1 lớp cha Phone là base class:
 ```
@@ -58,7 +87,7 @@ Có 5 loại kế thừa (Đọc thêm):
 * <b>Kế thừa lai</b> (Hybrid inheritance).
 
 ### Encapsulation (Đóng gói)
-*Khái niệm*: <b>Che giấu thông tin chi tiết của các đối tượng, chỉ cho phép truy cập thông qua phương thức public</b>. Tính chất này giúp tăng tính bảo mật cho đối tượng và tránh tình trạng dữ liệu bị hư hỏng ngoài ý muốn, giúp duy trì tính ổn định và độ tin cậy của chương trình. 
+<b>Che giấu thông tin chi tiết của các đối tượng, chỉ cho phép truy cập thông qua phương thức public</b>. Tính chất này giúp tăng tính bảo mật cho đối tượng và tránh tình trạng dữ liệu bị hư hỏng ngoài ý muốn, giúp duy trì tính ổn định và độ tin cậy của chương trình. 
 
 Tính đóng gói được khai triển bằng cách sử dụng Access modifier, gồm:
 * `public`: Có thể truy cập từ bất cứ đâu.
@@ -106,7 +135,7 @@ Console.WriteLine("Your name is: " + Person1.GetName()); // Ho Manh Quan
 ```
 
 ### Polymorphism (Đa hình)
-*Khái niệm*: Cho phép các đối tượng khác nhau thực thi chức năng giống nhau theo những cách khác nhau. Có 2 dạng đa hình:     
+Cho phép <b>các đối tượng khác nhau thực thi chức năng giống nhau theo những cách khác nhau</b>. Có 2 dạng đa hình:     
 
 * <b>Đa hình tĩnh</b> (Static polymorphism): Xảy ra trong thời gian biên dịch (compile-time). Hai cơ chế phổ biến nhất để đạt được đa hình tĩnh là `Method overloading` và `Operator overloading`.    
   - <b>Nạp chồng phương thức</b> (Method overloading): Cho phép bạn định nghĩa nhiều phương thức trong cùng một lớp có cùng tên nhưng khác nhau về kiểu dữ liệu hoặc số lượng tham số.
@@ -203,7 +232,7 @@ Shape4.Draw(); // Drawing a rectangle.
 ```
 
 ### Abstraction (Trừu tượng)
-*Khái niệm*: <b>Ẩn đi các chi tiết triển khai của một lớp và chỉ hiển thị những tính năng cần thiết cho người sử dụng</b>. Tính chất này được thể hiện qua việc sử dụng `Interface` hoặc `Abstract class`. 
+<b>Ẩn đi các chi tiết triển khai của một lớp và chỉ hiển thị những tính năng cần thiết cho người sử dụng</b>. Tính chất này được thể hiện qua việc sử dụng `Interface` hoặc `Abstract class`. 
 
 - <b>Lớp trừu tượng</b> (Abstract class): Là một lớp không thể được khởi tạo trực tiếp và chứa ít nhất một phương thức trừu tượng, được định nghĩa bằng từ khóa `abstract`. Các lớp con của lớp trừu tượng phải triển khai tất cả các phương thức trừu tượng này để có thể được sử dụng.
 - <b>Giao diện</b> (Interface): Dùng để định nghĩa các phương thức mà các lớp phải triển khai mà không có bất kỳ logic nào. Nó chỉ định hành vi mà một đối tượng có thể thực hiện, mà không cung cấp bất kỳ thông tin về cách thức triển khai cụ thể nào.
