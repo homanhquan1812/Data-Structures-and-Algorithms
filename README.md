@@ -193,9 +193,11 @@ public class Rectangle : Shape // Derived class
 ```
 Ở hàm chính thì ta thực hiện:
 ```
+Shape BaseShape = new Shape(); // Class Base vẫn có thể được sử dụng
 Shape Shape3 = new Circle();
 Shape Shape4 = new Rectangle();
 
+BaseShape.Draw(); // Drawing a shape.
 Shape3.Draw(); // Drawing a circle.
 Shape4.Draw(); // Drawing a rectangle.
 ```
