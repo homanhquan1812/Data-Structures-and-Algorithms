@@ -1,32 +1,146 @@
 ﻿# General IT Knowledge
 ## Basic knowledge of Object-Oriented Programming (OOP)
+### What is OOP?
 ### Class (Lớp)
-Là một khuôn mẫu (Template) để tạo ra các đối tượng. Nó định nghĩa các thuộc tính `Properties` và phương thức `Methods` mà các đối tượng của lớp đó sẽ có.
+Là một khuôn mẫu (Template) để tạo ra các đối tượng. Nó định nghĩa các trường `Fields` và phương thức `Methods` mà các đối tượng của lớp đó sẽ có.
 
 Các thành phần thường gặp trong Class:
-* `Property`: Gọi là thuộc tính, là những thông tin, đặc điểm của đối tượng.
-* `Field (Member variables)`: Còn được gọi là trường, khái niệm giống với thuộc tính, chỉ khác nhau cách dùng. 
-* `Method`: Gọi là phương thức (hoặc là hàm trong Class), được dùng để mô tả hành vi hoặc hành động mà các đối tượng của lớp đó có thể thực hiện.
-Ví dụ, một class Person có 2 phương thức <b>name</b> và <b>age</b>:
+* `Field (Member variable)`: Còn được gọi là **trường**, là những thông tin, đặc điểm của đối tượng. Ta thường dùng `private` để tăng tính bảo mật.
+Ví dụ, một class Person có 2 trường <b>name</b> và <b>age</b>:
 ```
 public class Person
 {
-    // Phương thức ghi tên
-    public void name()
+    // Fields
+    private string name;
+    private int age;  
+}
+```
+* `Constructor`: Hay còn được gọi là **hàm khởi tạo**, là một loại phương thức đặc biệt dùng để khởi tạo đối tượng của một lớp. Tên của Constructor phải trùng với tên lớp và không có kiểu trả về. Các Constructor có thể sử dụng các `Access modifiers` (Đọc ở dưới) để kiểm soát quyền truy cập.
+Ví dụ về 1 constructor trong class Person:
+```
+public class Person
+{
+    // Constructor
+    public Person(string name, int age)
     {
-        Console.Write("My name is Quan");
-    }
-
-    // Phương thức ghi tuổi
-    public double age(double myAge)
-    {
-        return myAge;
+        this.name = name;
+        this.age = age;
     }
 }
 ```
-* `Constructor`: Hay còn được gọi là hàm khởi tạo, là một loại phương thức đặc biệt dùng để khởi tạo đối tượng của một lớp. Tên của Constructor trùng với tên lớp và không có kiểu trả về. Các Constructor có thể sử dụng các access modifiers để kiểm soát quyền truy cập. 
-* `Destructor`: Còn gọi là hàm hủy, là một loại phương thức đặc biệt được thực thi khi một đối tượng của class đó bị hủy. Hàm này được sử dụng để giải phóng bộ nhớ (Đọc thêm khi nào cần sử dụng).         
-  
+* `Method`: Gọi là **phương thức** (hoặc là hàm trong Class), được dùng để mô tả hành vi hoặc hành động mà các đối tượng của lớp đó có thể thực hiện.
+Ví dụ, một class Person có 1 phương thức <b>Information</b>:
+```
+public class Person
+{
+    public void Information()
+    {
+        Console.WriteLine($"Your information includes name: {name} and age: {age}");
+    }
+}
+```     
+
+Các định nghĩa khác:
+* `Destructor`: Còn gọi là hàm hủy, là một loại phương thức đặc biệt được thực thi khi một đối tượng của class đó bị hủy. Hàm này được sử dụng để giải phóng bộ nhớ (Đọc thêm khi nào cần sử dụng).
+* `Property`: Gọi là thuộc tính, khái niệm giống với trường, chỉ khác nhau cách dùng và có tính đóng gói. Chỉ có vài ngôn ngữ lập trình có thuộc tính (C#, Python,...).
+Ví dụ về 1 đoạn code dùng field:
+```
+class Person
+{
+    // Fields
+    private string name;
+    public int age;           
+    
+    // Constructor
+    public Person(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    public string getName()
+    {
+        return name;
+    }
+    
+    public void setName(string value)
+    {
+        name = value;
+    }
+
+    // Methods
+    public void Information()
+    {
+        Console.WriteLine($"Your information includes name: {name} and age: {age}");
+    }
+}
+```
+Ta thấy rằng phải dùng **getName** và **setName** nếu biến **name** là **private**. C# có tính năng thay thế mà tốt hơn:
+* `Full property`: Tính năng này giúp kiểm soát dữ liệu tốt nhất với những điều kiện ta đặt.
+Ví dụ về **Full property**:
+```
+class Person
+{
+    // Fields
+    private string name;
+    public int age;           
+    
+    // Constructor
+    public Person(string name, int age)
+    {
+        Name = name;
+    }
+
+    // Full property
+    public string Name
+    {
+        get { return name; }
+        set 
+        { 
+            if (!string.IsNullOrEmpty(value))
+            {
+                name = value;
+            }
+            else
+            {
+                throw new ArgumentException("Name cannot be null or empty");
+            }
+        }
+    }
+
+    // Methods
+    public void Information()
+    {
+        Console.WriteLine($"Your information includes name: {name} and age: {age}");
+    }
+}
+```
+
+* `Auto-implemented property`: Nếu ta không cần kiểm soát chặt chẽ, ta chỉ cần dùng `{ get; set; }`.
+```
+class Person
+{
+    // Fields
+    private string name;
+    public int age;           
+    
+    // Constructor
+    public Person(string name, int age)
+    {
+        Name = name;
+    }
+
+    // Auto-implemented property
+    public string Name { get; set; }
+
+    // Methods
+    public void Information()
+    {
+        Console.WriteLine($"Your information includes name: {name} and age: {age}");
+    }
+}
+```
+
 ### Object
 ## Four concepts of Object-Oriented Programming
 ### Inheritance (Kế thừa)
