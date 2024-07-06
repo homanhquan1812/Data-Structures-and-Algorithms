@@ -1,4 +1,4 @@
-﻿# General IT Knowledge
+﻿# Object-Oriented Programming
 ## Basic knowledge of Object-Oriented Programming (OOP)
 ### What is OOP?
 <div align="center">
