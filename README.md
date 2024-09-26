@@ -522,15 +522,15 @@ myCat_I.MakeSound(); // Meow
 # Linked List
 Danh sách liên kết là 1 cấu trúc dữ liệu được sử dụng để lưu trữ 1 tập hợp các dữ liệu. Danh sách liên kết có các tính chất sau:
 
-* Các **phần tử (node)** trong danh sách liên kết được kết nối bằng con trỏ.
-* Phần tử cuối trỏ tới **NULL**.
+* Các **phần tử `node`** trong danh sách liên kết được kết nối bằng con trỏ.
+* Phần tử cuối trỏ tới `NULL`.
 * Có thể tăng hoặc giảm số lượng phần tử trong quá trình thực thi chương trình.
 * Tối ưu dung lượng bộ nhớ.
 
 Có 2 giải thuật chính đối với danh sách liên kết là:
 
-* **Insert**: Chèn một phần tử vào vị trí bất kỳ trong danh sách liên kết.
-* **Delete**: Xóa một phần tử ở vị trí bất kỳ trong danh sách liên kết.
+* `Insert`: Chèn một phần tử vào vị trí bất kỳ trong danh sách liên kết.
+* `Delete`: Xóa một phần tử ở vị trí bất kỳ trong danh sách liên kết.
   
 Danh sách liên kết được chia làm nhiều loại:
 * **Singly Linked List** (Danh sách liên kết đơn).
@@ -539,14 +539,14 @@ Danh sách liên kết được chia làm nhiều loại:
 * **Circular Doubly Linked** List (Danh sách liên kết vòng đôi). => Đọc thêm
 
 ## Singly Linked List
-Mỗi một phần tử trong danh sách liên kết đơn gồm có **data** và **next**, **next** sẽ trỏ tới **node** kế tiếp trong danh sách liên kết đơn. Và nếu **next** trỏ tới **NULL** thì có nghĩa là node đó là node cuối cùng trong danh sách liên kết đơn.
+Mỗi một phần tử trong danh sách liên kết đơn gồm có `data` và `next`, **next** sẽ trỏ tới **node** kế tiếp trong danh sách liên kết đơn. Và nếu **next** trỏ tới **NULL** thì có nghĩa là node đó là node cuối cùng trong danh sách liên kết đơn.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/8847a1b1-d8f4-4ae7-924a-6dbf89d8638f" alt="YOLOHOME Logo" width="600" style="">
 </div>
 
 ## Doubly Linked List
-Mỗi node trong danh sách liên kết đôi gồm có **prev**, **data** và **next**, **prev** trỏ tới phần tử đứng trước, **next** trỏ tới phần tử phía sau. Nếu **prev** trỏ tới **NULL** thì có nghĩa node đó là node đầu tiên trong danh sách liên kết đôi, còn nếu **next** trỏ tới **NULL** thì đó là node cuối trong danh sách liên kết đôi.
+Mỗi node trong danh sách liên kết đôi gồm có `prev`, `data` và `next`, **prev** trỏ tới phần tử đứng trước, **next** trỏ tới phần tử phía sau. Nếu **prev** trỏ tới **NULL** thì có nghĩa node đó là node đầu tiên trong danh sách liên kết đôi, còn nếu **next** trỏ tới **NULL** thì đó là node cuối trong danh sách liên kết đôi.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/647e6280-6af8-407e-afa1-af72adf146a0" alt="YOLOHOME Logo" width="600" style="">
