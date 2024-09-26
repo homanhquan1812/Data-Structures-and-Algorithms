@@ -531,6 +531,17 @@ Có 2 giải thuật chính đối với danh sách liên kết là:
 
 * `Insert`: Chèn một phần tử vào vị trí bất kỳ trong danh sách liên kết.
 * `Delete`: Xóa một phần tử ở vị trí bất kỳ trong danh sách liên kết.
+
+Khác biệt chính giữa **Linked List** và **Array List**: 
+
+| | Linked List | Array List |
+|---|---|---|
+| Cấu trúc dữ liệu | <ul><li>Dữ liệu được lưu trữ trong các node riêng biệt, mỗi node chứa dữ liệu và một con trỏ (pointer) đến node tiếp theo (hoặc cả node trước trong doubly linked list).</li><li>Kích thước có thể thay đổi động, không cần bộ nhớ liên tục.</li><li>Không có chỉ số để truy cập trực tiếp; phải duyệt qua các node để tìm phần tử.</li></ul> | <ul><li>Dữ liệu được lưu trữ trong một mảng (array), với các phần tử được sắp xếp liền kề nhau trong bộ nhớ.</li><li>Kích thước của mảng cố định khi tạo.</li><li>Truy cập phần tử bằng chỉ số **index**.</li></ul> |
+| Truy cập dữ liệu | Truy cập phần tử O(n) (thời gian tuyến tính), phải duyệt qua danh sách từ đầu đến cuối để tìm phần tử. | Truy cập phần tử O(1) (thời gian hằng số), vì có thể truy xuất trực tiếp bằng chỉ số. |
+| Thao tác chèn và xóa phần tử | <ul><li>Chèn hoặc xóa phần tử ở giữa danh sách có thể nhanh hơn (O(1)) nếu có con trỏ đến node liên quan, vì không cần dời các phần tử khác.</li><li>Tuy nhiên, nếu cần duyệt để tìm vị trí cần chèn/xóa, thao tác có thể mất O(n).</li></ul> | <ul><li>Thao tác chèn hoặc xóa phần tử ở giữa mảng tốn kém (O(n)) vì phải dời các phần tử khác để duy trì tính liên tiếp của mảng.</li><li>Chèn/xóa phần tử ở cuối có thể nhanh hơn (O(1) trong trường hợp tốt nhất) nếu mảng còn đủ chỗ.</li></ul> |
+| Sử dụng bộ nhớ | <ul><li>Bộ nhớ được cấp phát cho từng node riêng lẻ, không cần liên tục.</li><li>Mỗi node có thêm bộ nhớ cho con trỏ, dẫn đến việc sử dụng nhiều bộ nhớ hơn so với array list.</li></ul> | <ul><li>Bộ nhớ được cấp phát liên tục, có thể dẫn đến lãng phí bộ nhớ nếu có nhiều chỗ trống.</li><li>Nếu bộ nhớ mảng đầy, cần phải tạo một mảng mới với kích thước lớn hơn, và sao chép toàn bộ dữ liệu.</li></ul> |
+| Tính linh hoạt | <ul><li>Phù hợp khi cần thường xuyên chèn/xóa phần tử, đặc biệt là ở đầu hoặc giữa danh sách.</li><li>Không phù hợp khi cần truy cập ngẫu nhiên các phần tử.</li></ul> | <ul><li>Phù hợp khi cần truy cập nhanh các phần tử bằng chỉ số.</li><li>Không phù hợp khi cần thường xuyên chèn/xóa các phần tử ở giữa.</li></ul> |
+
   
 Danh sách liên kết được chia làm nhiều loại:
 * **Singly Linked List** (Danh sách liên kết đơn).
