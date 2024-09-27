@@ -210,7 +210,7 @@ Console.WriteLine($"My name is {Person2.getName()} and I'm {Person2.age} years o
 
 Person2.Information();
 ```
-## Four concepts of Object-Oriented Programming
+## 4 khái niệm cơ bản của OOP
 ### Inheritance (Kế thừa)
 
 <div align="center">
@@ -519,6 +519,30 @@ Animal_I myCat_I = new Cat_I();
 myCat_I.MakeSound(); // Meow
 ```
 
+# Algorithmic Complexity
+
+Độ phức tạp thuật toán là một thước đo dùng để xác định hiệu suất của một thuật toán, đánh giá lượng tài nguyên cần thiết (thời gian và bộ nhớ) để thực hiện thuật toán đó dựa trên kích thước đầu vào. 
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/1dbacde5-7196-40cf-8371-d3fbc08616f1" alt="YOLOHOME Logo" width="600" style="">
+</div>
+
+Có hai loại độ phức tạp chính:
+
+* **Độ phức tạp thời gian** (Time Complexity): Thường được biểu diễn bằng `Big-O notation` (kí hiệu O lớn), giúp chúng ta ước lượng thời gian chạy của thuật toán theo hàm của kích thước đầu vào. Một số ví dụ phổ biến:
+  - `O(1)`: Thời gian chạy không đổi, bất kể kích thước đầu vào (constant time).
+  - `O(log n)`: Thời gian chạy tăng theo logarit của kích thước đầu vào (logarithmic time). Ví dụ: thuật toán tìm kiếm nhị phân.
+  - `O(n)`: Thời gian chạy tỉ lệ thuận với kích thước đầu vào (linear time).
+  - `O(n.log n)`: Thời gian chạy phổ biến cho các thuật toán sắp xếp hiệu quả như Merge Sort và Quick Sort.
+  - `O(n^2)`: Thời gian chạy tỉ lệ với bình phương của kích thước đầu vào, thường gặp trong các thuật toán sử dụng hai vòng lặp lồng nhau (quadratic time).
+  - `O(2^n)`: Thời gian chạy tăng theo hàm mũ, rất kém hiệu quả, thường xuất hiện trong các bài toán như đệ quy trên tập hợp con (exponential time).
+  - `O(n!)`: Thời gian chạy theo giai thừa; Đây là mức độ phức tạp rất lớn, gần như không thể áp dụng cho các bài toán lớn vì số phép tính tăng rất nhanh.
+
+* **Độ phức tạp không gian** (Space Complexity): Cũng được biểu diễn bằng Big-O notation và đo lường lượng bộ nhớ mà thuật toán yêu cầu khi kích thước đầu vào tăng lên. Các yếu tố ảnh hưởng đến độ phức tạp không gian bao gồm:
+  - Bộ nhớ dùng để lưu trữ biến.
+  - Bộ nhớ dùng cho các cấu trúc dữ liệu như mảng, danh sách, cây,...
+  - Bộ nhớ đệ quy (stack).
+    
 # Linked List
 Danh sách liên kết là 1 cấu trúc dữ liệu được sử dụng để lưu trữ 1 tập hợp các dữ liệu. Danh sách liên kết có các tính chất sau:
 
