@@ -525,6 +525,8 @@ myCat_I.MakeSound(); // Meow
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/1dbacde5-7196-40cf-8371-d3fbc08616f1" alt="YOLOHOME Logo" width="600" style="">
+  
+  *Hình minh họa các mức độ phức tạp thuật toán dựa trên số lượng phép tính (Operations) theo kích thước đầu vào (Elements)*
 </div>
 
 Có hai loại độ phức tạp chính:
